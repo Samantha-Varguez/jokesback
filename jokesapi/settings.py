@@ -25,7 +25,7 @@ SECRET_KEY = 'ra6v*x4@%b!#u2mc#38pg=@ppc79z2+$cz0$o8-a2t+xz51h_1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,9 +80,13 @@ WSGI_APPLICATION = 'jokesapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'jokesapi',
+        'USER': 'postgres',
+        'PASSWORD': 'ecosamy09',
+        'HOST': 'localhost',
+        'PORT': '5432'
+}
 }
 
 
